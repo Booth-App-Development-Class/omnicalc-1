@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get("/square/results", { :controller => "application", :action => "calculate_square" })
 
-
+  get("/random/results", { :controller => "application", :action => "calculate_random" })
 
 
 

@@ -19,7 +19,15 @@ def calculate_square
 end
 
 
+def calculate_random
 
+  @lower = params.fetch("user_min").to_i
+  @upper = params.fetch("user_max").to_i
+  @result = rand(@lower..@upper)
+
+  render( { :template => "calculations_templates/random_results.html.erb"})
+
+end
 
 
 
