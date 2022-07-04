@@ -65,7 +65,8 @@ def calculate_payment
 
   @apr_cacl = params.fetch("user_apr").to_f
   @apr_form = params.fetch("user_apr").to_f/100/12
-  @apr = @apr_cacl.to_s(:percentage)
+  @apr_round = @apr_cacl.round(4)
+  @apr = @apr_round
   @years = params.fetch("user_years").to_i
   @years_form = @years*12
   @principal_calc = params.fetch("user_principal").to_i
